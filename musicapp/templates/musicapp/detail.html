@@ -1,0 +1,55 @@
+{% extends 'musicapp/base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"  />
+    <style>
+            .songTitle{color:forestgreen ; font-size : 15px ; text-decoration: none ; font-weight : 400 }
+    </style>
+</head>
+<body>
+    {%  block title %} 앨범정보 {% endblock %}
+    {% block body %}
+             <div class="column">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="{{ album.album_logo }}" height="200" width="200">
+              <div class="caption">
+                <h3>{{ album.album_title }}</h3>
+                <p> {{ album.artist }}</p>
+                </p>
+              </div>
+            </div>
+          </div>
+            </div>
+        <!-- 여기까지 썸네일 -->
+
+
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">All Songs</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item">Title</li>
+    <li class="list-group-item">Audio File</li>
+    <li class="list-group-item">Favorite</li>
+    <li class="list-group-item">Actions</li>
+  </ul>
+</div>
+
+
+    {% endblock %}
+    {% block Current %}
+        <ul class="nav navbar-nav">
+            <li><a href="#"><span class = "glyphicon glyphicon-cd"></span>&nbsp; Albums <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#"><span class = "glyphicon glyphicon-music"></span> Songs<span class="sr-only">(current)</span></a></li>
+        </ul>
+    {% endblock %}
+
+
+</body>
+</html>

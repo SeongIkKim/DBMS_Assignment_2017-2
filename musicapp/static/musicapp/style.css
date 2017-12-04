@@ -1,0 +1,11 @@
+body{
+    background : white url("images/gplaypattern.png")
+}
+
+.navbar-brand{
+    font-family : 'Covered By Your Grace', cursive;
+}
+
+.navbar{
+    border-radius: 0;
+}
